@@ -1,8 +1,7 @@
 {
     "output": "build/melody.phar",
-    "chmod": "0755",
     "compactors": [
-        "Herrera\\Box\\Compactor\\Php"
+        "KevinGH\\Box\\Compactor\\Php"
     ],
     "compression": "GZ",
     "directories": ["src"],
@@ -16,7 +15,5 @@
             "in": ["src", "vendor"]
         }
     ],
-    "git-commit": "git-commit",
-    "main": "bin/melody",
-    "stub": true
+    "git-commit": "git-commit"
 }

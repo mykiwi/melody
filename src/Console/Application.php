@@ -36,7 +36,7 @@ class Application extends BaseApplication
 
     public function getLongVersion()
     {
-        $version = parent::getLongVersion().' by <comment>SensioLabs</comment>';
+        $version = parent::getLongVersion();
         $commit = '@git-commit@';
 
         if ('@'.'git-commit@' !== $commit) {

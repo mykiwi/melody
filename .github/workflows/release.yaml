@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          tools: phive
+
+      - run: composer install
+
+      - name: Setup Box
+        run: phive --no-progress install --force-accept-unsigned --target ./ humbug/box
+
+      - name: Build phar
+        run: ./box compile
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: build/melody.phar
+          token: ${{ secrets.GITHUB_TOKEN }}

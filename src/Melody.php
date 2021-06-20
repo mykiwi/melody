@@ -21,7 +21,7 @@ use SensioLabs\Melody\WorkingDirectory\WorkingDirectoryFactory;
  */
 class Melody
 {
-    const VERSION = '1.0';
+    const VERSION = '1.1.0';
 
     private $garbageCollector;
     private $handlers;
