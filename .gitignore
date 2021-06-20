@@ -3,3 +3,5 @@
 /vendor/
 !/bin/melody
 !/build/.gitkeep
+/phpunit.xml
+.phpunit.result.cache

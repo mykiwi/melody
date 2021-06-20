@@ -1,13 +1,15 @@
-Melody - One-file composer scripts
-==================================
+# Melody - One-file composer scripts
 
-Create a file named `test.php`:
+
+## Demo
+
+Create a file named `script.php`:
 
 ```php
 <?php
 <<<CONFIG
 packages:
-    - "symfony/finder: ~2.8"
+    - "symfony/finder: ^5"
 CONFIG;
 
 $finder = Symfony\Component\Finder\Finder::create()
@@ -24,12 +26,5 @@ foreach ($finder as $file) {
 And simply run it:
 
 ```bash
-$ melody run test.php
+$ melody run script.php
 ```
-
-![demo](http://melody.sensiolabs.org/img/melody.gif)
-
-More Information
-----------------
-
-Read the [documentation](http://melody.sensiolabs.org) for more information.
